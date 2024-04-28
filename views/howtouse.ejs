@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navigation.ejs') %>
+
+<main>
+  <section class="how-to-use">
+    <h1>How to Use the Dice Roller</h1>
+    <article>
+      <h2>Rolling Dice</h2>
+      <p>To roll dice, follow these simple steps:</p>
+      <ol>
+        <li>Select the number of dice you want to roll using the dropdown menu.</li>
+        <li>Choose the type of dice from the following options: d2, d3, d4, d6, d8, d10, d12, d20, d100.</li>
+        <li>If needed, add a modifier by entering a number between 0-99 to add or subtract from the roll.</li>
+        <li>Click the 'Roll' button to generate the outcome.</li>
+        <li>The result will be displayed in the output space.</li>
+      </ol>
+    </article>
+
+    <article>
+      <h2>Adding Notes</h2>
+      <p>You can keep track of your game details by using the notes section:</p>
+      <ul>
+        <li>Enter your notes in the provided text area.</li>
+        <li>Your notes will be saved locally on your device.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Adding More Dice Rollers</h2>
+      <p>If you need to roll multiple sets of dice:</p>
+      <ul>
+        <li>Click the '+' button next to the dice roller to add another set.</li>
+        <li>You can add up to 100 dice rollers and roll them individually or simultaneously.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Viewing Roll History</h2>
+      <p>Each roll you make is logged with details and timestamps:</p>
+      <ul>
+        <li>Check the results log next to the dice roller to see the history of your rolls.</li>
+        <li>You can save and export the entire log to a PDF file for your records.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<%- include('partials/footer.ejs') %>

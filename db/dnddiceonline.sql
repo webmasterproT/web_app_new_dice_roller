@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS dnddiceonline;
+USE dnddiceonline;
+
+CREATE TABLE IF NOT EXISTS dice_rolls (
+    roll_id INT AUTO_INCREMENT PRIMARY KEY,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    roll_details VARCHAR(255) NOT NULL,
+    total INT NOT NULL,
+    notes TEXT
+);
+
+CREATE TABLE IF NOT EXISTS users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash CHAR(60) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS roll_logs (
+    log_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    log_content LONGTEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL
+);

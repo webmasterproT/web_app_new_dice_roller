@@ -1,0 +1,122 @@
+/* Main Stylesheet for dnddiceonline.com */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('../public/images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Navigation Styles */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Dice Roller Styles */
+#diceRoller {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#rollButton {
+  background-color: #f7d02c;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#output, #notesSection, #resultsLog {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#addDiceRoller {
+  background-color: #4e4e50;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Utility Classes */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Button Hover Effects */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Link Hover Effects */
+nav a:hover {
+  text-decoration: underline;
+}
