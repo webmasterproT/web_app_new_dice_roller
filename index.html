@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Dice Roller</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <% include partials/navigation.ejs %>
+    </header>
+
+    <main id="diceRoller">
+        <h1>Dungeons & Dragons Dice Roller</h1>
+        <div class="dice-roller-container">
+            <div class="dice-options">
+                <label for="diceCount">Number of Dice:</label>
+                <input type="number" id="diceCount" min="1" max="99" value="1">
+                
+                <label for="diceType">Type of Dice:</label>
+                <select id="diceType">
+                    <option value="d2">d2</option>
+                    <option value="d3">d3</option>
+                    <option value="d4">d4</option>
+                    <option value="d6" selected>d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                    <option value="d20">d20</option>
+                    <option value="d100">d100</option>
+                </select>
+                
+                <label for="modifier">Modifier (+/-):</label>
+                <input type="number" id="modifier" min="-99" max="99" value="0">
+            </div>
+            
+            <button id="rollButton" onclick="rollDice()">Roll</button>
+            <button id="addDiceRoller" onclick="addDiceRoller()">+</button>
+            
+            <div id="output"></div>
+            
+            <textarea id="notesSection" placeholder="Notes..."></textarea>
+        </div>
+        
+        <div id="resultsLog">
+            <h2>Results Log</h2>
+            <!-- Results will be appended here -->
+        </div>
+    </main>
+
+    <footer>
+        <% include partials/footer.ejs %>
+    </footer>
+
+    <script src="js/dice-roller.js"></script>
+    <script src="js/results-log.js"></script>
+</body>
+</html>

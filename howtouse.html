@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - D&D Dice Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <% include partials/navigation.ejs %>
+    </header>
+
+    <main>
+        <section class="how-to-use">
+            <h1>How to Use the Dice Roller</h1>
+            <article>
+                <h2>Rolling Dice</h2>
+                <p>To roll dice, follow these steps:</p>
+                <ol>
+                    <li>Select the number of dice you want to roll.</li>
+                    <li>Choose the type of dice from d2 up to d100.</li>
+                    <li>Add any modifiers to your roll if necessary.</li>
+                    <li>Click the 'Roll' button to see the result.</li>
+                </ol>
+            </article>
+
+            <article>
+                <h2>Adding Dice Rollers</h2>
+                <p>You can add additional dice rollers by clicking the '+' button next to the dice roller. This allows you to roll multiple sets of dice at once.</p>
+            </article>
+
+            <article>
+                <h2>Using the Results Log</h2>
+                <p>The results log will display the history of your rolls with timestamps. You can save and export this log to a PDF by clicking the 'Save Log' button.</p>
+            </article>
+
+            <article>
+                <h2>Notes Section</h2>
+                <p>Keep track of game details or any notes you need in the notes section provided.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <% include partials/footer.ejs %>
+    </footer>
+
+    <script src="js/dice-roller.js"></script>
+    <script src="js/results-log.js"></script>
+</body>
+</html>
